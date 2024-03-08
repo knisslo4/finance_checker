@@ -93,7 +93,7 @@ ws = wb.active
 
 green_fill = PatternFill(start_color='C6EFCE', end_color='C6EFCE', fill_type='solid')
 red_fill = PatternFill(start_color='FFC7CE', end_color='FFC7CE', fill_type='solid')
-blue_fill = PatternFill(start_color='B6D7A8', end_color='B6D7A8', fill_type='solid')
+blue_fill = PatternFill(start_color='87CEEB', end_color='87CEEB', fill_type='solid')
 
 for row in ws.iter_rows(min_row=2, max_col=ws.max_column, max_row=ws.max_row):
     for cell in row:

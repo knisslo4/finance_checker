@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Balances</title>
+    <style>
+        .account {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .account span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Account Balances</h1>
+    {% for account, balance in balances.items() %}
+    <div class="account">
+        <span>{{ account }} Account:</span> ${{ balance }}
+    </div>
+    {% endfor %}
+</body>
+</html>
