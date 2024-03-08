@@ -6,24 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Balances</title>
     <style>
-        .account {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f3f3f3;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
         }
-        .account span {
-            font-weight: bold;
+        .balances {
+            text-align: center;
+        }
+        .account {
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple box shadow for a card effect */
+        }
+        .account h2 {
+            margin: 0 0 10px;
+            font-size: 2em;
+            color: #333;
+        }
+        .account-value {
+            font-size: 1.5em;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>Account Balances</h1>
-    {% for account, balance in balances.items() %}
-    <div class="account">
-        <span>{{ account }} Account:</span> ${{ balance }}
+    <div class="balances">
+        <h1>Account Balances</h1>
+        {% for account, balance in balances.items() %}
+        <div class="account">
+            <h2>{{ account }} Account</h2>
+            <div class="account-value">${{ "%.2f"|format(balance) }}</div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </body>
 </html>
