@@ -19,6 +19,7 @@ def index():
     
     return render_template('index.html', balances=balances)
 
+@app.route('/paychecks')
 def paychecks():
     one_month_ago = datetime.today() - timedelta(days=30)
     one_month_from_date = datetime.today() + timedelta(days=30)
