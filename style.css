@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #484848;
+}
+.balances {
+    text-align: center;
+}
+.account {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: #91c8ff;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple box shadow for a card effect */
+}
+.account h2 {
+    margin: 0 0 10px;
+    font-size: 2em;
+    color: #333;
+}
+.account-value {
+    font-size: 1.5em;
+    color: #555;
+}
