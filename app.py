@@ -7,10 +7,10 @@ app = Flask(__name__)
 entries = []
 
 starting_balances = {
-    "Checking": 4006.55,
-    "Savings": 0,
-    "Invested": 2002.48,
-    "Taxes": 355.77
+    "Checking": 1000,
+    "Savings": 5000,
+    "Invested": 5000,
+    "Taxes": 600.50
 }
 
 @app.route('/')
